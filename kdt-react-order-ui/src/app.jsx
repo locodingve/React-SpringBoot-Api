@@ -52,7 +52,7 @@ function App() {
       }).then(
         v => alert("주문이 정상적으로 접수되었습니다."),
         e => {
-          alert("서버 장애");
+          alert("서버에서 문제가 생겼습니다. 주문에 어려움을 드려죄송합니다.");
           console.error(e);
         })
     }
