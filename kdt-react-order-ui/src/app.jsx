@@ -22,6 +22,16 @@ function App() {
       }]
     setItems(updatedItems);
   }
+  const handleMinusClicked = productId => {
+    const product = products.find(v => v.productId === productId);
+    const found = items.find(v => v.productId === productId);
+    const updatedItems =
+      found ? items.map(v => (v.productId === productId) ? {...v, count: v.count < 1 ? 0 : v.count - 1} : v) : [...items, {
+        ...product,
+        count: 1
+      }]
+    setItems(updatedItems);
+  }
   
   useEffect(() => {
     axios.get('http://localhost:8080/api/v1/products')
@@ -59,7 +69,7 @@ function App() {
       <div className="card">
         <div className="row">
           <div className="col-md-8 mt-4 d-flex flex-column align-items-start p-3 pt-0">
-            <ProductList products={products} onAddClick={handleAddClicked}/>
+            <ProductList products={products} onAddClick={handleAddClicked} onMinusClick={handleMinusClicked}/>
           </div>
           <div className="col-md-4 summary p-4">
             <Summary items={items} onOrderSubmit={handleOrderSubmit}/>

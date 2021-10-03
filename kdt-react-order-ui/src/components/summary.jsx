@@ -22,7 +22,7 @@ export function Summary({items = [], onOrderSubmit}) {
         <h5 className="m-0 p-0"><b>Summary</b></h5>
       </div>
       <hr/>
-      {items.map(v => <SummaryItem key={v.productId} count={v.count} productName={v.productName}/>)}
+      {items.map(v => v.count >0 ? <SummaryItem key={v.productId} count={v.count} productName={v.productName}/> : null)}
       <form>
         <div className="mb-3">
           <label htmlFor="email" className="form-label">이메일</label>

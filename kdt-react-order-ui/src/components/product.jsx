@@ -10,7 +10,7 @@ export function Product(props) {
     props.onAddClick(productId);
   };
   const handleReduceBtnClicked = e => {
-    
+    props.onMinusClick(productId);
   };
 
   return <>
