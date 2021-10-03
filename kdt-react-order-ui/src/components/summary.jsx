@@ -1,4 +1,4 @@
-import {SummaryItem} from "./SummaryItem";
+import {SummaryItem} from "./summaryItem";
 import React, {useState} from "react";
 
 export function Summary({items = [], onOrderSubmit}) {

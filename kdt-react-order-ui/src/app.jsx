@@ -1,8 +1,8 @@
-import './App.css';
+import './app.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import React, {useEffect, useState} from 'react';
-import {ProductList} from "./components/ProductList";
-import {Summary} from "./components/Summary";
+import {ProductList} from "./components/productList";
+import {Summary} from "./components/summary";
 import axios from "axios";
 
 function App() {

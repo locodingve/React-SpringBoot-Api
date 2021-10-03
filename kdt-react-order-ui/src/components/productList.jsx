@@ -1,5 +1,5 @@
 import React from "react";
-import {Product} from "./Product";
+import {Product} from "./product";
 
 export function ProductList({products = [], onAddClick}) {
   return (
