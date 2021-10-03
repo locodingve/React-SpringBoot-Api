@@ -23,13 +23,10 @@ function App() {
     setItems(updatedItems);
   }
   const handleMinusClicked = productId => {
-    const product = products.find(v => v.productId === productId);
+    const product = products.filter(v => v.productId === productId);
     const found = items.find(v => v.productId === productId);
     const updatedItems =
-      found ? items.map(v => (v.productId === productId) ? {...v, count: v.count < 1 ? 0 : v.count - 1} : v) : [...items, {
-        ...product,
-        count: 1
-      }]
+      items.filter((v) => v.productId === productId && v.count > 1).map(v => ({...v, count: v.count - 1 })) 
     setItems(updatedItems);
   }
   
