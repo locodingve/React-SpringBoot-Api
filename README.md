@@ -27,6 +27,6 @@
 Crome, Firefox, Safari
 
 ## 실행방법
-₩₩₩
+```
   yarn start
-₩₩₩
+```
