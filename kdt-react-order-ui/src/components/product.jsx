@@ -9,6 +9,9 @@ export function Product(props) {
   const handleAddBtnClicked = e => {
     props.onAddClick(productId);
   };
+  const handleReduceBtnClicked = e => {
+    
+  };
 
   return <>
     <div className="col-2">
@@ -20,7 +23,12 @@ export function Product(props) {
     </div>
     <div className="col text-center price">{price}원</div>
     <div className="col text-end action">
-      <button onClick={handleAddBtnClicked} className="btn btn-small btn-outline-dark">추가</button>
+    <button onClick={handleReduceBtnClicked} className="btn btn-small btn-outline-dark">
+      <i className="fas fa-minus-circle" color="orange"></i>
+    </button>
+      <button onClick={handleAddBtnClicked} className="btn btn-small btn-outline-dark">
+        <i className="fas fa-plus-circle" color="orange"></i>
+      </button>
     </div>
   </>
 }
